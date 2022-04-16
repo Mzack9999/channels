@@ -62,7 +62,6 @@ func (ch *BatchingChannel) batchingBuffer() {
 			if open {
 				ch.buffer = append(ch.buffer, elem)
 			} else {
-				input = nil
 				nextInput = nil
 			}
 		case output <- ch.buffer:
