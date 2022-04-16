@@ -30,11 +30,11 @@ func NewResizableChannel() *ResizableChannel {
 	return ch
 }
 
-func (ch *ResizableChannel) In() chan<- interface{} {
+func (ch *ResizableChannel) In() chan interface{} {
 	return ch.input
 }
 
-func (ch *ResizableChannel) Out() <-chan interface{} {
+func (ch *ResizableChannel) Out() chan interface{} {
 	return ch.output
 }
 
